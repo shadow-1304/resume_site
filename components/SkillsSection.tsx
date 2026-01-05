@@ -15,7 +15,7 @@ const SkillsSection: React.FC = () => {
 
   return (
     <section id="skills" className="py-24 bg-slate-900/30 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-slate-100 mb-4">Technical Expertise</h2>
           <div className="w-20 h-1 bg-blue-600 rounded-full mx-auto"></div>

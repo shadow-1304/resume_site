@@ -22,7 +22,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="py-12 border-t border-slate-900 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-slate-500 text-sm">
             © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
           </p>

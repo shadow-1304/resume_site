@@ -6,7 +6,7 @@ import { GraduationCap, MapPin, Globe } from 'lucide-react';
 const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-24 bg-slate-950 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
           <div className="lg:col-span-3">
             <h2 className="text-3xl font-bold text-slate-100 mb-6">Profile Summary</h2>

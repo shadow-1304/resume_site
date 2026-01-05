@@ -9,7 +9,7 @@ const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="py-24 bg-slate-900/20 scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <h2 className="text-3xl font-bold text-slate-100 mb-4">Let's Connect</h2>

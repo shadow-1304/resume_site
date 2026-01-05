@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
     }
     
     return () => {
+      // FIX: Corrected cleanup for scroll event listener by removing reference to non-existent property 'removeInterceptor'
       window.removeEventListener('scroll', handleScroll);
       document.body.style.overflow = 'unset';
     };
@@ -44,7 +45,7 @@ const Navbar: React.FC = () => {
       />
 
       <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled || isMobileMenuOpen ? 'bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50 py-3' : 'bg-transparent py-6'}`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto px-6 flex justify-between items-center">
           <a href="#" className="text-xl font-black tracking-tighter flex items-center group">
             <span className="text-blue-500 group-hover:text-blue-400 transition-colors uppercase">PARTH</span>
             <span className="text-slate-500 font-mono group-hover:text-slate-300 transition-colors">_ROOT</span>

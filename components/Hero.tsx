@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Shield, Zap, Terminal, ArrowRight } from 'lucide-react';
+import { Shield, Zap, Terminal, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 -left-10 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-blob"></div>
       <div className="absolute top-1/2 -right-10 w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-blob animation-delay-2000"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full">
+      <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center space-x-3 bg-slate-900 border border-slate-800 rounded-full pl-2 pr-4 py-1.5 mb-10 mx-auto lg:mx-0">
@@ -62,7 +62,6 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="relative order-1 lg:order-2">
-             {/* Decorative Tech frame for desktop, but subtle enough to not look cluttered on mobile if it were visible */}
              <div className="relative w-full aspect-square max-w-lg mx-auto transform hover:scale-[1.02] transition-transform duration-700">
                 <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 rounded-[3rem] blur-2xl opacity-30"></div>
                 <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-3xl border border-slate-800 rounded-[3rem] shadow-2xl flex items-center justify-center overflow-hidden">
@@ -96,7 +95,6 @@ const Hero: React.FC = () => {
                    </div>
                 </div>
                 
-                {/* Floating Tech Badge */}
                 <div className="absolute -bottom-6 -right-6 md:-right-12 bg-slate-900 border border-slate-800 p-6 rounded-3xl shadow-2xl backdrop-blur-xl animate-bounce duration-[3000ms]">
                    <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">Status</p>
                    <p className="text-green-500 font-bold flex items-center">
@@ -109,7 +107,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      {/* CSS for custom animation */}
       <style>{`
         @keyframes progress {
           0% { width: 0%; }
