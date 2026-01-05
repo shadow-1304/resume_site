@@ -21,18 +21,31 @@ const App: React.FC = () => {
         <ContactSection />
       </main>
 
-      <footer className="py-12 border-t border-slate-900 bg-slate-950">
-        <div className="max-w-[90%] 2xl:max-w-[1536px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
-          </p>
-          <div className="flex items-center space-x-6 text-sm">
-            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">Terms of Service</a>
+      <footer className="py-16 border-t border-slate-900 bg-slate-950">
+        <div className="max-w-[96%] 2xl:max-w-[1800px] mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="flex flex-col items-center md:items-start">
+            <p className="text-slate-100 font-black text-xl mb-2 tracking-tighter uppercase">
+              PARTH<span className="text-blue-600">_ROOT</span>
+            </p>
+            <p className="text-slate-500 text-sm">
+              © {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.
+            </p>
           </div>
-          <p className="text-slate-500 text-xs font-mono">
-            Built with React & Tailwind CSS
-          </p>
+          
+          <div className="flex items-center space-x-10 text-xs font-black uppercase tracking-[0.2em]">
+            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">Privacy</a>
+            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">Terms</a>
+            <a href="#contact" className="text-slate-400 hover:text-blue-400 transition-colors">Hire Me</a>
+          </div>
+          
+          <div className="text-right">
+            <p className="text-slate-500 text-[10px] font-mono uppercase tracking-[0.3em]">
+              Security Protocol: <span className="text-green-500">ENCRYPTED</span>
+            </p>
+            <p className="text-slate-700 text-[9px] font-mono mt-1">
+              Built with React, Vite & Tailwind
+            </p>
+          </div>
         </div>
       </footer>
     </div>
