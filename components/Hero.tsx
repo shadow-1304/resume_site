@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="inline-flex items-center space-x-3 bg-slate-900/50 border border-slate-800/50 rounded-full pl-2 pr-4 py-1.5 mb-10 mx-auto lg:mx-0">
               <div className="bg-blue-600 px-2 py-0.5 rounded-full text-[10px] font-black text-white uppercase tracking-tighter">New</div>
-              <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">Open for 2025 Collaborations</span>
+              <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">Open for 2026 Collaborations</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl xl:text-7xl font-black text-white tracking-tighter leading-[1.1] mb-8 uppercase">

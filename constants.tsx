@@ -29,7 +29,7 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "Hexylon Analytics",
     role: "Network and AI Automation Intern",
-    period: "JAN 2025 - JUN 2025",
+    period: "JAN 2026 - JUN 2026",
     description: [
       "Completed a 6-month internship in AI Automation, working on building AI models, RAG systems, and automation workflows.",
       "Developed AI agents and integrated them into practical use cases.",
@@ -53,7 +53,7 @@ export const EDUCATION: Education[] = [
   {
     institution: "Gujarat University",
     degree: "BSc IT in Network Security",
-    period: "2023 - 2025",
+    period: "2023 - 2026",
     gpa: "7.8 / 10"
   }
 ];
