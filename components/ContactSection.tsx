@@ -4,8 +4,8 @@ import { Mail, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const ContactSection: React.FC = () => {
-  // NOTE: To make this work, replace 'YOUR_FORMSPREE_ID' with your actual ID from formspree.io
-  const formspreeUrl = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+  // Integrated the provided Formspree ID for real-time email notifications
+  const formspreeUrl = "https://formspree.io/f/xlgdzyrb";
 
   return (
     <section id="contact" className="py-24 bg-slate-900/20 scroll-mt-24">
