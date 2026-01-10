@@ -29,11 +29,11 @@ export const EXPERIENCES: Experience[] = [
   {
     company: "Hexylon Analytics",
     role: "Network and AI Automation Intern",
-    period: "JAN 2026 - JUN 2026",
+    period: "JAN 2025 - JUN 2025 | JAN 2026 - PRESENT",
     description: [
-      "Completed a 6-month internship in AI Automation, working on building AI models, RAG systems, and automation workflows.",
-      "Developed AI agents and integrated them into practical use cases.",
-      "Used Python to create and optimize AI-driven automation solutions."
+      "Building AI models, RAG systems, and automation workflows through continuous professional development.",
+      "Developed AI agents and integrated them into practical use cases to streamline industrial operations.",
+      "Using Python to create and optimize AI-driven automation solutions for network security and analysis."
     ],
     skills: ["AI Automation", "RAG", "Python", "API Integration", "Git/GitHub"]
   },
@@ -53,7 +53,7 @@ export const EDUCATION: Education[] = [
   {
     institution: "Gujarat University",
     degree: "BSc IT in Network Security",
-    period: "2023 - 2026",
+    period: "2023 - 2025",
     gpa: "7.8 / 10"
   }
 ];
