@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Shield, Zap, Terminal, ArrowRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
+import SlotText from './SlotText';
 
 const Hero: React.FC = () => {
   return (
@@ -75,32 +76,34 @@ const Hero: React.FC = () => {
                     </div>
                     <div className="space-y-4 text-xs md:text-sm">
                       <div className="animate-reveal opacity-0" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
-                        <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">initialize_identity</span></p>
+                        <p className="text-blue-500 font-bold tracking-tight">$ <SlotText text="initialize_identity" delay={400} className="text-slate-200" /></p>
                       </div>
 
                       <div className="animate-reveal opacity-0" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>
-                        <p className="text-slate-400 pl-4 border-l border-slate-800">
-                          User: {PERSONAL_INFO.name}<br />
-                          Role: {PERSONAL_INFO.title}<br />
-                          Location: {PERSONAL_INFO.location}<br />
-                          Status: <span className="text-green-500/80 font-bold italic">Authorized</span>
-                        </p>
-                      </div>
-
-                      <div className="animate-reveal opacity-0" style={{ animationDelay: '1600ms', animationFillMode: 'forwards' }}>
-                        <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">establish_handshake --peer remote-gw</span></p>
-                        <p className="text-[10px] text-slate-500 pl-4 italic">Protocol: SSH-v2.0-OpenSSH_8.9 | Encrypt: AES-GCM</p>
+                        <div className="text-slate-400 pl-4 border-l border-slate-800">
+                          User: <SlotText text={PERSONAL_INFO.name} delay={1000} duration={800} /><br />
+                          Role: <SlotText text={PERSONAL_INFO.title} delay={1200} duration={800} /><br />
+                          Location: <SlotText text={PERSONAL_INFO.location} delay={1400} duration={800} /><br />
+                          Status: <SlotText text="Authorized" delay={1600} className="text-green-500/80 font-bold italic" />
+                        </div>
                       </div>
 
                       <div className="animate-reveal opacity-0" style={{ animationDelay: '2400ms', animationFillMode: 'forwards' }}>
-                        <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">run_automation --mode security</span></p>
+                        <p className="text-blue-500 font-bold tracking-tight">$ <SlotText text="establish_handshake --peer remote-gw" delay={2600} className="text-slate-200" /></p>
+                        <p className="text-[10px] text-slate-500 pl-4 italic">
+                          <SlotText text="Protocol: SSH-v2.0-OpenSSH_8.9 | Encrypt: AES-GCM" delay={3000} />
+                        </p>
+                      </div>
+
+                      <div className="animate-reveal opacity-0" style={{ animationDelay: '4000ms', animationFillMode: 'forwards' }}>
+                        <p className="text-blue-500 font-bold tracking-tight">$ <SlotText text="run_automation --mode security" delay={4200} className="text-slate-200" /></p>
                         <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800/50 mt-2">
                           <div className="flex justify-between items-center text-[9px] text-slate-500 mb-2 font-black uppercase tracking-widest">
-                            <span>Scanning Protocols...</span>
+                            <SlotText text="Scanning Protocols..." delay={4600} />
                             <span className="text-blue-400 animate-pulse">LIVE</span>
                           </div>
                           <div className="w-full h-1 bg-slate-900 rounded-full overflow-hidden">
-                            <div className="h-full bg-blue-600 w-3/4 animate-progress" style={{ animationDelay: '2800ms' }}></div>
+                            <div className="h-full bg-blue-600 w-3/4 animate-progress" style={{ animationDelay: '5000ms' }}></div>
                           </div>
                         </div>
                       </div>
@@ -111,10 +114,10 @@ const Hero: React.FC = () => {
 
               <div className="absolute -bottom-4 -right-4 md:-right-6 bg-slate-900 border border-slate-800 p-5 rounded-2xl shadow-2xl backdrop-blur-xl animate-bounce duration-[4000ms]">
                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">Status</p>
-                <p className="text-green-500 font-bold flex items-center text-xs">
+                <div className="text-green-500 font-bold flex items-center text-xs">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                  OPERATIONAL
-                </p>
+                  <SlotText text="OPERATIONAL" delay={1000} duration={1500} />
+                </div>
               </div>
             </div>
           </div>
@@ -142,3 +145,4 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
