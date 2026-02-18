@@ -28,8 +28,8 @@ export const SKILLS: SkillCategory[] = [
 export const EXPERIENCES: Experience[] = [
   {
     company: "Hexylon Analytics",
-    role: "Network and AI Automation Intern",
-    period: "JAN 2025 - JUN 2025 | JAN 2026 - PRESENT",
+    role: "Network and AI Automation Developer",
+    period: "JAN 2025 - JUN 2025 (Internship) | JAN 2026 - PRESENT",
     description: [
       "Building AI models, RAG systems, and automation workflows through continuous professional development.",
       "Developed AI agents and integrated them into practical use cases to streamline industrial operations.",
