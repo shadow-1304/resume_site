@@ -74,20 +74,34 @@ const Hero: React.FC = () => {
                       <div className="w-2.5 h-2.5 rounded-full bg-green-500/80 shadow-lg shadow-green-500/20"></div>
                     </div>
                     <div className="space-y-4 text-xs md:text-sm">
-                      <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">initialize_identity</span></p>
-                      <p className="text-slate-400 pl-4 border-l border-slate-800">
-                        User: {PERSONAL_INFO.name}<br />
-                        Role: {PERSONAL_INFO.title}<br />
-                        Location: {PERSONAL_INFO.location}
-                      </p>
-                      <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">run_automation --mode security</span></p>
-                      <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800/50">
-                        <div className="flex justify-between items-center text-[9px] text-slate-500 mb-2 font-black uppercase tracking-widest">
-                          <span>Scanning Protocols...</span>
-                          <span className="text-blue-400 animate-pulse">LIVE</span>
-                        </div>
-                        <div className="w-full h-1 bg-slate-900 rounded-full overflow-hidden">
-                          <div className="h-full bg-blue-600 w-3/4 animate-progress"></div>
+                      <div className="animate-reveal opacity-0" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
+                        <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">initialize_identity</span></p>
+                      </div>
+
+                      <div className="animate-reveal opacity-0" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>
+                        <p className="text-slate-400 pl-4 border-l border-slate-800">
+                          User: {PERSONAL_INFO.name}<br />
+                          Role: {PERSONAL_INFO.title}<br />
+                          Location: {PERSONAL_INFO.location}<br />
+                          Status: <span className="text-green-500/80 font-bold italic">Authorized</span>
+                        </p>
+                      </div>
+
+                      <div className="animate-reveal opacity-0" style={{ animationDelay: '1600ms', animationFillMode: 'forwards' }}>
+                        <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">establish_handshake --peer remote-gw</span></p>
+                        <p className="text-[10px] text-slate-500 pl-4 italic">Protocol: SSH-v2.0-OpenSSH_8.9 | Encrypt: AES-GCM</p>
+                      </div>
+
+                      <div className="animate-reveal opacity-0" style={{ animationDelay: '2400ms', animationFillMode: 'forwards' }}>
+                        <p className="text-blue-500 font-bold tracking-tight">$ <span className="text-slate-200">run_automation --mode security</span></p>
+                        <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800/50 mt-2">
+                          <div className="flex justify-between items-center text-[9px] text-slate-500 mb-2 font-black uppercase tracking-widest">
+                            <span>Scanning Protocols...</span>
+                            <span className="text-blue-400 animate-pulse">LIVE</span>
+                          </div>
+                          <div className="w-full h-1 bg-slate-900 rounded-full overflow-hidden">
+                            <div className="h-full bg-blue-600 w-3/4 animate-progress" style={{ animationDelay: '2800ms' }}></div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -112,8 +126,15 @@ const Hero: React.FC = () => {
           0% { width: 0%; }
           100% { width: 75%; }
         }
+        @keyframes reveal {
+          0% { transform: translateY(30px) scaleY(1.2); opacity: 0; filter: blur(10px); }
+          100% { transform: translateY(0) scaleY(1); opacity: 1; filter: blur(0); }
+        }
         .animate-progress {
           animation: progress 2.5s ease-out forwards;
+        }
+        .animate-reveal {
+          animation: reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
       `}</style>
     </section>
