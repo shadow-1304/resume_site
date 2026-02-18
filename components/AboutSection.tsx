@@ -5,7 +5,7 @@ import { GraduationCap, MapPin, Globe } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-slate-950 scroll-mt-24">
+    <section id="about" className="py-24 bg-transparent scroll-mt-24">
       <div className="max-w-[96%] 2xl:max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-20">
           <div className="lg:col-span-3">
@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
             <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-10 font-light">
               {PERSONAL_INFO.summary}
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="flex items-center space-x-4 p-5 bg-slate-900/30 rounded-2xl border border-slate-800/50">
                 <div className="bg-blue-600/10 p-3 rounded-xl text-blue-500">
@@ -43,7 +43,7 @@ const AboutSection: React.FC = () => {
             <div>
               <h2 id="education" className="text-2xl font-bold text-slate-100 mb-6 uppercase tracking-wider scroll-mt-28">Education</h2>
               <div className="w-12 h-1 bg-blue-600 rounded-full mb-8"></div>
-              
+
               <div className="space-y-6">
                 {EDUCATION.map((edu, idx) => (
                   <div key={idx} className="relative group p-6 md:p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">

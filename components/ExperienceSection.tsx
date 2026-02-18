@@ -5,7 +5,7 @@ import { EXPERIENCES } from '../constants';
 
 const ExperienceSection: React.FC = () => {
   return (
-    <section id="experience" className="py-24 bg-slate-950 scroll-mt-24">
+    <section id="experience" className="py-24 bg-transparent scroll-mt-24">
       <div className="max-w-[96%] 2xl:max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-slate-100 mb-4 uppercase tracking-wider">Work Experience</h2>
@@ -45,8 +45,8 @@ const ExperienceSection: React.FC = () => {
 
                 <div className="flex flex-wrap gap-2.5">
                   {exp.skills.map((skill, i) => (
-                    <span 
-                      key={i} 
+                    <span
+                      key={i}
                       className="px-3 py-1.5 bg-slate-800/50 text-slate-500 text-[10px] font-black uppercase tracking-[0.2em] rounded-lg border border-slate-800/50"
                     >
                       {skill}
