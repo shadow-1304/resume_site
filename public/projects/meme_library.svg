@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="462" height="900" viewBox="0 0 462 900">
+  <rect width="462" height="900" fill="#0d0d0d"/>
+
+  <!-- status bar -->
+  <text x="24" y="34" font-family="Arial,sans-serif" font-size="14" fill="#bbb" font-weight="600">10:39</text>
+  <text x="372" y="34" font-family="Arial,sans-serif" font-size="13" fill="#bbb">86%</text>
+
+  <!-- Title -->
+  <text x="24" y="88" font-family="Arial,sans-serif" font-size="30" fill="white" font-weight="bold">Library</text>
+
+  <!-- ── Row 1 ── -->
+  <rect x="14" y="106" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="124" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="149" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">bruh.mp3</text>
+  <text x="28" y="168" font-family="Arial,sans-serif" font-size="12" fill="#555">2s</text>
+  <text x="348" y="152" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="152" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="154" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- ── Row 2 ── -->
+  <rect x="14" y="194" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="212" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="237" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">vine_boom.mp3</text>
+  <text x="28" y="256" font-family="Arial,sans-serif" font-size="12" fill="#555">1s</text>
+  <text x="348" y="240" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="240" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="242" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- ── Row 3 ── -->
+  <rect x="14" y="282" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="300" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="325" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">nani.mp3</text>
+  <text x="28" y="344" font-family="Arial,sans-serif" font-size="12" fill="#555">1s</text>
+  <text x="348" y="328" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="328" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="330" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- ── Row 4 ── -->
+  <rect x="14" y="370" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="388" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="413" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">dramatic.mp3</text>
+  <text x="28" y="432" font-family="Arial,sans-serif" font-size="12" fill="#555">4s</text>
+  <text x="348" y="416" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="416" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="418" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- ── Row 5 ── -->
+  <rect x="14" y="458" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="476" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="501" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">sad_violin.mp3</text>
+  <text x="28" y="520" font-family="Arial,sans-serif" font-size="12" fill="#555">5s</text>
+  <text x="348" y="504" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="504" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="506" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- ── Row 6 ── -->
+  <rect x="14" y="546" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="564" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="589" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">among_us.mp3</text>
+  <text x="28" y="608" font-family="Arial,sans-serif" font-size="12" fill="#555">3s</text>
+  <text x="348" y="592" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="592" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="594" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- ── Row 7 ── -->
+  <rect x="14" y="634" width="434" height="76" rx="14" fill="#1c1b14" stroke="#2f2d1e" stroke-width="1"/>
+  <text x="28" y="652" font-family="Arial,sans-serif" font-size="10" fill="#777">📌  Pinned to Home Screen</text>
+  <text x="28" y="677" font-family="Arial,sans-serif" font-size="16" fill="#e8dfc4" font-weight="500">oof.mp3</text>
+  <text x="28" y="696" font-family="Arial,sans-serif" font-size="12" fill="#555">1s</text>
+  <text x="348" y="680" font-family="Arial,sans-serif" font-size="20" fill="#777">✂</text>
+  <text x="384" y="680" font-family="Arial,sans-serif" font-size="18" fill="#c8a030">📌</text>
+  <text x="418" y="682" font-family="Arial,sans-serif" font-size="17" fill="#b03030">🗑</text>
+
+  <!-- FAB -->
+  <rect x="258" y="824" width="180" height="46" rx="23" fill="#252318" stroke="#3f3d28" stroke-width="1.5"/>
+  <text x="348" y="852" font-family="Arial,sans-serif" font-size="15" fill="#e8dfc4" font-weight="600" text-anchor="middle">＋ Import MP3</text>
+</svg>
