@@ -22,6 +22,25 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    id: 'intel-air-group',
+    name: 'Intel Air Group',
+    tagline: 'Engineered Comfort · HVAC Solutions at Scale',
+    description:
+      'A professional corporate website developed for an established HVAC solutions provider. Features customized service showcases, calculation-driven layouts, and a modern aesthetic reflecting thermal comfort and system reliability.',
+    url: 'https://intelairgroup.com/',
+    accentColor: '#f8fafc',
+    glowColor: 'rgba(248, 250, 252, 0.12)',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Responsive Design', 'Web Development'],
+    logo: '/projects/intel_air_logo.svg',
+    screenshots: [],
+    usps: [
+      'Tailored industrial design showcasing end-to-end HVAC services',
+      'Engineered for maximum reliability and structural design showcase',
+      'Fully responsive, performance-optimized single-page layout',
+      'Integration of professional inquiry flows and service catalogs',
+    ],
+  },
+  {
     id: 'shadow',
     name: 'SHADOW',
     tagline: 'Own Intelligence · Curating the Digital Self',
@@ -146,6 +165,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onScreenshotClick }) => {
   const [hovered, setHovered] = useState(false);
+  const [btnHovered, setBtnHovered] = useState(false);
   const hasScreenshots = project.screenshots.length > 0;
 
   const handleVisit = () => {
@@ -216,9 +236,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onScreenshotClick })
               ))}
             </ul>
             {project.url && (
-              <button onClick={handleVisit}
+              <button
+                onClick={handleVisit}
+                onMouseEnter={() => setBtnHovered(true)}
+                onMouseLeave={() => setBtnHovered(false)}
                 className="self-start flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-black uppercase tracking-[0.15em] transition-all duration-300"
-                style={{ background: project.accentColor + '15', border: `1px solid ${project.accentColor}40`, color: project.accentColor, boxShadow: hovered ? `0 0 20px -4px ${project.glowColor}` : 'none' }}>
+                style={{
+                  background: btnHovered ? project.accentColor + '25' : project.accentColor + '10',
+                  border: `1px solid ${project.accentColor}${btnHovered ? '80' : '30'}`,
+                  color: project.accentColor,
+                  transform: btnHovered ? 'translateY(-2px) scale(1.03)' : 'translateY(0) scale(1)',
+                  boxShadow: btnHovered ? `0 10px 25px -10px ${project.glowColor}` : 'none'
+                }}
+              >
                 <ExternalLink className="w-4 h-4" /> Visit Project
               </button>
             )}
@@ -274,9 +304,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onScreenshotClick })
               ))}
             </ul>
             {project.url ? (
-              <button onClick={handleVisit}
+              <button
+                onClick={handleVisit}
+                onMouseEnter={() => setBtnHovered(true)}
+                onMouseLeave={() => setBtnHovered(false)}
                 className="self-start flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-black uppercase tracking-[0.15em] transition-all duration-300"
-                style={{ background: project.accentColor + '15', border: `1px solid ${project.accentColor}40`, color: project.accentColor }}>
+                style={{
+                  background: btnHovered ? project.accentColor + '25' : project.accentColor + '10',
+                  border: `1px solid ${project.accentColor}${btnHovered ? '80' : '30'}`,
+                  color: project.accentColor,
+                  transform: btnHovered ? 'translateY(-2px) scale(1.03)' : 'translateY(0) scale(1)',
+                  boxShadow: btnHovered ? `0 10px 25px -10px ${project.glowColor}` : 'none'
+                }}
+              >
                 <ExternalLink className="w-4 h-4" /> Visit Project
               </button>
             ) : (

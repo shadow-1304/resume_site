@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <radialGradient id="shadow-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%"  stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050a14"/>
+    </radialGradient>
+
+    <!-- White-to-slate gradient for the I lettermark -->
+    <linearGradient id="shadow-letter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f8fafc"/>
+      <stop offset="60%"  stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+
+    <!-- Soft white glow -->
+    <filter id="shadow-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0.9
+                1 0 0 0 0.9
+                1 0 0 0 0.95
+                0 0 0 0.45 0" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Top shine -->
+    <linearGradient id="shadow-shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle white border gradient -->
+    <linearGradient id="shadow-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="50%"  stop-color="#94a3b8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="44" fill="url(#shadow-bg)"/>
+
+  <!-- Outer border -->
+  <rect width="400" height="400" rx="44" fill="none" stroke="url(#shadow-border)" stroke-width="1.5"/>
+
+  <!-- Inner inset ring -->
+  <rect x="12" y="12" width="376" height="376" rx="34" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.6"/>
+
+  <!-- Top shine overlay -->
+  <rect width="400" height="200" rx="44" fill="url(#shadow-shine)"/>
+
+  <!-- Ambient white glow blob behind letter -->
+  <ellipse cx="200" cy="210" rx="110" ry="90" fill="#ffffff" fill-opacity="0.03"/>
+
+  <!-- I lettermark -->
+  <text
+    x="200" y="278"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="232"
+    font-weight="bold"
+    fill="url(#shadow-letter)"
+    text-anchor="middle"
+    filter="url(#shadow-glow)"
+  >I</text>
+
+  <!-- Bottom accent lines -->
+  <line x1="120" y1="334" x2="280" y2="334" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.12"/>
+  <line x1="160" y1="334" x2="240" y2="334" stroke="#cbd5e1" stroke-width="1.2" stroke-opacity="0.25"/>
+</svg>
