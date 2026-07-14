@@ -17,7 +17,7 @@ const ExperienceSection: React.FC = () => {
             <div key={idx} className="relative pl-10 md:pl-16">
               <div className="absolute -left-[6px] top-0 w-3 h-3 bg-blue-600 rounded-full z-10 shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
 
-              <div className="bg-slate-900/20 border border-slate-800/40 p-8 md:p-10 rounded-3xl hover:border-blue-500/20 transition-all group">
+              <div className="tile-glass border border-slate-800/40 p-8 md:p-10 rounded-3xl hover:border-blue-500/20 transition-all group">
                 <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-4 mb-8">
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-slate-100 group-hover:text-blue-400 transition-colors tracking-tight">

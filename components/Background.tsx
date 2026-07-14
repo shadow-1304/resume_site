@@ -7,14 +7,6 @@ const Background: React.FC = () => {
       {/* Base Background */}
       <div className="absolute inset-0 bg-[#020617]"></div>
 
-      {/* Grid Pattern - Subtle Blue Tint Dots */}
-      <div
-        className="absolute inset-0 opacity-[0.3]"
-        style={{
-          backgroundImage: `radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px)`,
-          backgroundSize: '32px 32px'
-        }}
-      ></div>
 
       {/* Large Ambient Glows */}
       <div className="absolute -top-[10%] -left-[10%] w-[70%] h-[70%] rounded-full bg-blue-900/10 blur-[120px] animate-pulse"></div>

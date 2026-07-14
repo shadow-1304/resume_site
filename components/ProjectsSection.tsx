@@ -178,12 +178,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onScreenshotClick })
     <div
       className="group relative rounded-3xl border transition-all duration-500"
       style={{
-        background: 'rgba(15, 23, 42, 0.4)',
-        borderColor: hovered ? 'rgba(248,250,252,0.2)' : 'rgba(255,255,255,0.06)',
+        background: 'rgba(23, 37, 84, 0.7)',
+        backdropFilter: 'blur(16px) saturate(180%)',
+        WebkitBackdropFilter: 'blur(16px) saturate(180%)',
+        borderColor: hovered ? 'rgba(59, 130, 246, 0.4)' : 'rgba(59, 130, 246, 0.2)',
         transition: 'border-color 0.4s ease, box-shadow 0.4s ease',
         boxShadow: hovered
-          ? `0 0 70px -10px ${project.glowColor}`
-          : '0 0 0px transparent',
+          ? `0 0 70px -10px ${project.glowColor}, 0 4px 30px rgba(0, 0, 0, 0.3)`
+          : '0 4px 30px rgba(0, 0, 0, 0.3)',
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

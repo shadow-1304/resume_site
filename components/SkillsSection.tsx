@@ -28,7 +28,7 @@ const SkillsSection: React.FC = () => {
           {SKILLS.map((skillGroup, idx) => (
             <div
               key={idx}
-              className="bg-slate-900/30 border border-slate-800/50 p-8 xl:p-10 rounded-3xl hover:shadow-2xl hover:shadow-blue-900/5 transition-all hover:-translate-y-1 group"
+              className="tile-glass border border-slate-800/50 p-8 xl:p-10 rounded-3xl hover:shadow-2xl hover:shadow-blue-900/5 transition-all hover:-translate-y-1 group"
             >
               <div className="w-12 h-12 bg-blue-600/10 text-blue-500 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600/20 transition-colors">
                 {getIcon(skillGroup.category)}

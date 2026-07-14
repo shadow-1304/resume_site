@@ -16,7 +16,7 @@ const AboutSection: React.FC = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="flex items-center space-x-4 p-5 bg-slate-900/30 rounded-2xl border border-slate-800/50">
+              <div className="flex items-center space-x-4 p-5 tile-glass rounded-2xl border border-slate-800/50">
                 <div className="bg-blue-600/10 p-3 rounded-xl text-blue-500">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
                   <p className="text-slate-200 font-medium text-sm">{PERSONAL_INFO.location}</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4 p-5 bg-slate-900/30 rounded-2xl border border-slate-800/50">
+              <div className="flex items-center space-x-4 p-5 tile-glass rounded-2xl border border-slate-800/50">
                 <div className="bg-teal-600/10 p-3 rounded-xl text-teal-500">
                   <Globe className="w-5 h-5" />
                 </div>
@@ -46,7 +46,7 @@ const AboutSection: React.FC = () => {
 
               <div className="space-y-6">
                 {EDUCATION.map((edu, idx) => (
-                  <div key={idx} className="relative group p-6 md:p-8 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">
+                  <div key={idx} className="relative group p-6 md:p-8 tile-glass border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">
                     <div className="absolute -top-3 -right-3 bg-blue-600 text-white p-2.5 rounded-xl shadow-lg transform group-hover:scale-110 transition-transform">
                       <GraduationCap className="w-5 h-5" />
                     </div>

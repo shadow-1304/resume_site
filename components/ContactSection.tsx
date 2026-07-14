@@ -56,7 +56,7 @@ const ContactSection: React.FC = () => {
             </p>
 
             <div className="space-y-5 max-w-md">
-              <a href={`mailto:${PERSONAL_INFO.email}`} className="group flex items-center space-x-6 p-6 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="group flex items-center space-x-6 p-6 tile-glass border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">
                 <div className="bg-blue-600/10 p-4 rounded-xl text-blue-500 group-hover:scale-105 transition-transform">
                   <Mail className="w-6 h-6" />
                 </div>
@@ -66,7 +66,7 @@ const ContactSection: React.FC = () => {
                 </div>
               </a>
 
-              <a href={`tel:${PERSONAL_INFO.phone}`} className="group flex items-center space-x-6 p-6 bg-slate-900/30 border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">
+              <a href={`tel:${PERSONAL_INFO.phone}`} className="group flex items-center space-x-6 p-6 tile-glass border border-slate-800/50 rounded-2xl hover:border-blue-500/30 transition-all">
                 <div className="bg-teal-600/10 p-4 rounded-xl text-teal-500 group-hover:scale-105 transition-transform">
                   <Phone className="w-6 h-6" />
                 </div>
@@ -84,7 +84,7 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-slate-900/30 border border-slate-800/50 p-8 md:p-12 xl:p-14 rounded-[2.5rem] relative overflow-hidden min-h-[500px] flex flex-col justify-center">
+          <div className="tile-glass border border-slate-800/50 p-8 md:p-12 xl:p-14 rounded-[2.5rem] relative overflow-hidden min-h-[500px] flex flex-col justify-center">
             <div className="absolute top-0 right-0 p-32 bg-blue-600/5 blur-[120px] rounded-full"></div>
 
             {status === 'success' ? (

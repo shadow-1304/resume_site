@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
 
       <div className="max-w-[96%] 2xl:max-w-[1600px] mx-auto relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-center lg:text-left order-1 lg:order-1">
             <div className="inline-flex items-center space-x-3 bg-slate-900/50 border border-slate-800/50 rounded-full pl-2 pr-4 py-1.5 mb-10 mx-auto lg:mx-0">
               <div className="bg-blue-600 px-2 py-0.5 rounded-full text-[10px] font-black text-white uppercase tracking-tighter">New</div>
               <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">Open for 2026 Collaborations</span>
@@ -62,10 +62,10 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative order-1 lg:order-2">
+          <div className="relative order-2 lg:order-2">
             <div className="relative w-full aspect-square max-w-lg lg:ml-auto transform hover:scale-[1.01] transition-transform duration-700">
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 rounded-[2.5rem] blur-2xl opacity-20"></div>
-              <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-3xl border border-slate-800/50 rounded-[2.5rem] shadow-2xl flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 tile-glass border border-slate-800/50 rounded-[2.5rem] shadow-2xl flex items-center justify-center overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                 <div className="p-8 md:p-10 font-mono text-left w-full h-full flex flex-col justify-center">
                   <div className="space-y-6">
@@ -112,7 +112,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 -right-4 md:-right-6 bg-slate-900 border border-slate-800 p-5 rounded-2xl shadow-2xl backdrop-blur-xl animate-bounce duration-[4000ms]">
+              <div className="absolute -bottom-4 -right-4 md:-right-6 tile-glass border border-slate-800 p-5 rounded-2xl shadow-2xl animate-bounce duration-[4000ms]">
                 <p className="text-[9px] font-black text-slate-500 uppercase tracking-widest mb-1">Status</p>
                 <div className="text-green-500 font-bold flex items-center text-xs">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
