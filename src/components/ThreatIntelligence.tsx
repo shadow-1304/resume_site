@@ -116,7 +116,14 @@ export default function ThreatIntelligence() {
       className="relative w-full border-t border-white/5 bg-[#050505] px-6 py-24 md:px-12 lg:px-24"
     >
       {/* Top Section Header */}
-      <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono">
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono"
+      >
         <div>
           <span className="text-[10px] font-bold tracking-widest text-accent-brightRed uppercase">
             SECURE_REPORT // SEC-01
@@ -128,11 +135,18 @@ export default function ThreatIntelligence() {
         <span className="text-[10px] text-text-muted mt-2 md:mt-0 tracking-wider">
           CLASSIFICATION: CONFIDENTIAL // SUBJECT: PROFILE OVERVIEW
         </span>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         {/* Left: Editorial Profile (5 cols) */}
-        <div className="lg:col-span-5 flex flex-col justify-between">
+        <motion.div
+          initial={{ opacity: 0, x: -70 }}
+          whileInView={{ opacity: 1, y: 0, x: 0 }}
+          exit={{ opacity: 0, x: -70 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.2, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-5 flex flex-col justify-between"
+        >
           <div className="space-y-6">
             <span className="inline-block border border-accent-mutedRed/30 bg-surface-secondary px-3 py-1 font-mono text-[9px] font-bold text-accent-brightRed uppercase">
               AGENT IN-SIGHTS
@@ -169,10 +183,17 @@ export default function ThreatIntelligence() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Right: Operational Progression Timeline (7 cols) */}
-        <div className="lg:col-span-7">
+        <motion.div
+          initial={{ opacity: 0, x: 70 }}
+          whileInView={{ opacity: 1, y: 0, x: 0 }}
+          exit={{ opacity: 0, x: 70 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.2, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-7"
+        >
           <div className="border border-white/5 bg-[#0d0d0d] p-6 md:p-8">
             <span className="mb-8 inline-block font-mono text-[9px] font-bold text-accent-brightRed tracking-widest uppercase">
               // CHRONOLOGICAL PROGRESSION LOG
@@ -307,7 +328,7 @@ export default function ThreatIntelligence() {
               })}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

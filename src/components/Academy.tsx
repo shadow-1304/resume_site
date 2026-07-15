@@ -1,6 +1,7 @@
 'use client';
 
 import { BookOpen, GraduationCap, Server, Code, FileText, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const languages = [
   { name: 'English', proficiency: 'Fluent' },
@@ -15,7 +16,14 @@ export default function Academy() {
       className="relative w-full border-t border-white/5 bg-[#050505] px-6 py-24 md:px-12 lg:px-24"
     >
       {/* Section Header */}
-      <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono">
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono"
+      >
         <div>
           <span className="text-[10px] font-bold tracking-widest text-accent-brightRed uppercase">
             EDUCATION // LOG-05
@@ -27,11 +35,21 @@ export default function Academy() {
         <span className="text-[10px] text-text-muted mt-2 md:mt-0 tracking-wider">
           ACADEMIC_CREDENTIALS: BSC IT & NETSEC CORE
         </span>
-      </div>
+      </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto">
+      <div 
+        className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto"
+        style={{ perspective: 1000 }}
+      >
         {/* Left: Degree Card (5 cols) */}
-        <div className="lg:col-span-5 border border-white/5 bg-[#0d0d0d] p-6 md:p-8 space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40, rotateX: 8, rotateY: -4 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0 }}
+          exit={{ opacity: 0, y: 40, rotateX: 8, rotateY: -4 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.4, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-5 border border-white/5 bg-[#0d0d0d] p-6 md:p-8 space-y-6"
+        >
           <div className="flex h-12 w-12 items-center justify-center border border-white/10 bg-background text-accent-brightRed">
             <GraduationCap className="h-6 w-6" />
           </div>
@@ -62,10 +80,17 @@ export default function Academy() {
           <div className="border-t border-white/5 pt-4 font-mono text-[10px] text-text-muted">
             <p>&gt; Practical focus: Server architectures, cryptographic hashes, network topologies, port defense strategies, and script automations.</p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right: Coursework & Philosophy (7 cols) */}
-        <div className="lg:col-span-7 space-y-8">
+        <motion.div
+          initial={{ opacity: 0, y: 40, rotateX: 8, rotateY: 4 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0, rotateY: 0 }}
+          exit={{ opacity: 0, y: 40, rotateX: 8, rotateY: 4 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.4, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-7 space-y-8"
+        >
           {/* Practical Journey Bio */}
           <div className="border border-white/5 bg-[#0d0d0d] p-6">
             <span className="font-mono text-[9px] font-bold text-accent-brightRed uppercase tracking-widest block mb-3">
@@ -99,7 +124,7 @@ export default function Academy() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

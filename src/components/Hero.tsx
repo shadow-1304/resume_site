@@ -86,14 +86,16 @@ export default function Hero() {
 
         {/* Display Headline */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          initial={{ opacity: 0, scale: 0.55 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.55 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative px-4"
         >
           <h1 className="font-serif font-bold text-text-primary uppercase select-none flex flex-col items-center justify-center leading-[0.85] tracking-tighter">
-            <span className="text-[12.8vw] md:text-[11.6vw] leading-none block">PARTH</span>
-            <span className="text-[7.4vw] md:text-[6.7vw] leading-none block tracking-[0.03em] mt-2">PRAJAPATI</span>
+            <span className="text-[12.8vw] md:text-[11.6vw] leading-none block glitch-text" data-text="PARTH">PARTH</span>
+            <span className="text-[7.4vw] md:text-[6.7vw] leading-none block tracking-[0.03em] mt-2 glitch-text" data-text="PRAJAPATI">PRAJAPATI</span>
           </h1>
         </motion.div>
 

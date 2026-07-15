@@ -151,7 +151,14 @@ export default function Operations() {
       className="relative w-full border-t border-white/5 bg-[#050505] px-6 py-24 md:px-12 lg:px-24"
     >
       {/* Section Header */}
-      <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono">
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono"
+      >
         <div>
           <span className="text-[10px] font-bold tracking-widest text-accent-brightRed uppercase">
             OPERATIONS // LOG-03
@@ -163,7 +170,7 @@ export default function Operations() {
         <span className="text-[10px] text-text-muted mt-2 md:mt-0 tracking-wider">
           CLASSIFIED CASE STUDIES // EVIDENCE DATA LAYOUT
         </span>
-      </div>
+      </motion.div>
 
       {/* Projects Timeline Cases */}
       <div className="space-y-32">
@@ -175,7 +182,12 @@ export default function Operations() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start"
             >
               {/* Left Column: Visual Architectural Diagram / Screenshot (5 cols) */}
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: isEven ? -60 : 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: isEven ? -60 : 60 }}
+                viewport={{ once: false, amount: 0.15 }}
+                transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
                 className={`lg:col-span-5 ${
                   isEven ? 'lg:order-1' : 'lg:order-2'
                 } border border-white/5 bg-[#0d0d0d] p-6`}
@@ -228,10 +240,15 @@ export default function Operations() {
                   <div>SURVEILLANCE: PASSING</div>
                   <div className="text-right">PORT: {project.demo ? 'REMOTE_URL' : 'GITHUB_REPO'}</div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Right Column: Case Study Details (7 cols) */}
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: isEven ? 60 : -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: isEven ? 60 : -60 }}
+                viewport={{ once: false, amount: 0.15 }}
+                transition={{ duration: 1.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 className={`lg:col-span-7 ${
                   isEven ? 'lg:order-2' : 'lg:order-1'
                 } space-y-6`}
@@ -371,7 +388,7 @@ export default function Operations() {
                     </a>
                   )}
                 </div>
-              </div>
+              </motion.div>
             </div>
           );
         })}

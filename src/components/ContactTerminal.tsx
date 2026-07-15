@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Terminal, Copy, Check, Send, ShieldAlert, GitBranch } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function ContactTerminal() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -122,7 +123,14 @@ export default function ContactTerminal() {
       className="relative w-full border-t border-white/5 bg-[#050505] px-6 py-24 md:px-12 lg:px-24"
     >
       {/* Section Header */}
-      <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono">
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono"
+      >
         <div>
           <span className="text-[10px] font-bold tracking-widest text-accent-brightRed uppercase">
             TERMINAL // LOG-07
@@ -134,11 +142,18 @@ export default function ContactTerminal() {
         <span className="text-[10px] text-text-muted mt-2 md:mt-0 tracking-wider">
           PORT_SCAN: RESPONSIVE // ADDRESS: REMOTE_SHADOW
         </span>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-7xl mx-auto">
         {/* Left: Terminal Console GUI (7 cols) */}
-        <div className="lg:col-span-7 border border-white/5 bg-[#0d0d0d] font-mono text-xs flex flex-col">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 60 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.2, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-7 border border-white/5 bg-[#0d0d0d] font-mono text-xs flex flex-col"
+        >
           {/* Header Bar */}
           <div className="border-b border-white/5 bg-[#050505] px-4 py-3 flex items-center justify-between text-text-muted text-[10px] font-bold">
             <div className="flex items-center space-x-2">
@@ -239,10 +254,17 @@ export default function ContactTerminal() {
               <span>{isSubmitting ? 'DISPATCHING PAYLOAD...' : 'DISPATCH MESSAGE'}</span>
             </button>
           </form>
-        </div>
+        </motion.div>
 
         {/* Right: Coordinates & Info (5 cols) */}
-        <div className="lg:col-span-5 space-y-6">
+        <motion.div
+          initial={{ opacity: 0, y: -60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -60 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 1.2, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-5 space-y-6"
+        >
           {/* Coordinates Card */}
           <div className="border border-white/5 bg-[#0d0d0d] p-6 space-y-6">
             <span className="font-mono text-[9px] font-bold text-accent-brightRed uppercase tracking-widest block">
@@ -314,7 +336,7 @@ export default function ContactTerminal() {
               This channel runs TLS packet encapsulation. Message payloads are recorded in standard audit logs. LinkedIn references are intentionally excluded from the directory rules.
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

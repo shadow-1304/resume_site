@@ -68,7 +68,14 @@ export default function Arsenal() {
       className="relative w-full border-t border-white/5 bg-[#050505] px-6 py-24 md:px-12 lg:px-24"
     >
       {/* Section Header */}
-      <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono">
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -30 }}
+        viewport={{ once: false, amount: 0.15 }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+        className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-b border-white/5 pb-8 font-mono"
+      >
         <div>
           <span className="text-[10px] font-bold tracking-widest text-accent-brightRed uppercase">
             WEAPONRY // LOG-02
@@ -80,12 +87,20 @@ export default function Arsenal() {
         <span className="text-[10px] text-text-muted mt-2 md:mt-0 tracking-wider">
           SYSTEM_UTILITIES: COMPREHENSIVE SECURITY & DEV STACK
         </span>
-      </div>
+      </motion.div>
 
       {/* Grid of Categories */}
       <div className="space-y-16">
         {skillCategories.map((category, catIdx) => (
-          <div key={catIdx} className="space-y-6">
+          <motion.div
+            key={catIdx}
+            initial={{ opacity: 0, y: 40, scale: 0.92 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 40, scale: 0.92 }}
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ duration: 1.3, delay: catIdx * 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-6"
+          >
             {/* Category Header */}
             <div className="flex items-center space-x-3 border-b border-white/5 pb-3">
               <category.icon className="h-5 w-5 text-accent-brightRed" />
@@ -139,7 +154,7 @@ export default function Arsenal() {
                 );
               })}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
