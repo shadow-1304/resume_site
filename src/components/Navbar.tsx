@@ -6,9 +6,9 @@ import { Terminal, Shield, Menu, X } from 'lucide-react';
 const navItems = [
   { name: 'Home', href: '#home' },
   { name: 'Threat Intelligence', href: '#threat-intelligence' },
-  { name: 'Arsenal', href: '#arsenal' },
   { name: 'Operations', href: '#operations' },
   { name: 'Academy', href: '#academy' },
+  { name: 'Arsenal', href: '#arsenal' },
   { name: 'Contact Terminal', href: '#contact-terminal' },
 ];
 

@@ -39,9 +39,9 @@ export default function Home() {
             <main className="relative z-10 w-full">
               <Hero />
               <ThreatIntelligence />
-              <Arsenal />
               <Operations />
               <Academy />
+              <Arsenal />
               <ContactTerminal />
             </main>
 
