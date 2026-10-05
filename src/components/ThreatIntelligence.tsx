@@ -6,9 +6,9 @@ import { Eye, Shield, Activity, Award, Calendar, Plus, Minus, ShieldCheck, Brief
 
 const stats = [
   { label: 'PROJECTS COMPLETED', value: '3', icon: Shield },
-  { label: 'WORK EXPERIENCES', value: '3', icon: Eye },
+  { label: 'WORK EXPERIENCES', value: '2', icon: Eye },
   { label: 'VERIFIED LANGUAGES', value: '3', icon: Activity },
-  { label: 'ACADEMIC GPA', value: '7.8', icon: Calendar },
+  { label: 'ACADEMIC GPA', value: '7.6', icon: Calendar },
 ];
 
 interface Milestone {
@@ -66,37 +66,19 @@ const milestones: Milestone[] = [
     techStack: ['Python', 'API Integration', 'Git', 'GitHub'],
   },
   {
-    id: 'receptionist-admin-assistant',
-    period: 'SUMMER 2024 (2 MONTHS)',
-    title: 'Receptionist & Administrative Assistant',
-    location: 'Flex Knee Hospital',
-    details: 'Managed multi-line front-desk telecommunication routing, client reception, and scheduling workflows.',
-    responsibilities: [
-      'Managed multi-line front-desk telecommunication routing, client reception, and scheduling workflows.',
-      'Maintained digital intake records and coordinated standard operational admin logs.',
-    ],
-    achievements: [
-      'Coordinated administrative logs and maintained digital intake registries.',
-      'Routed telecommunication lines and handled receptionist schedules.',
-    ],
-    impact: 'Improved front-desk communications and registry management.',
-    skillsGained: ['Telecommunication Routing', 'Administrative Coordination', 'Digital Records Keeping'],
-    techStack: ['Admin Logs', 'Digital Intake Systems', 'Scheduling Tools'],
-  },
-  {
     id: 'education-degree',
     period: '2023 – 2025',
     title: 'B.Sc. in Information Technology (Network Security)',
     location: 'Gujarat University',
-    details: 'Graduated with First Class Distinction | Cumulative GPA: 7.8/10.',
+    details: 'Graduated with First Class Distinction | Cumulative GPA: 7.6/10.',
     responsibilities: [
       'Graduated with First Class Distinction.',
-      'Cumulative GPA: 7.8 / 10.00.',
+      'Cumulative GPA: 7.6 / 10.00.',
       'Specialized in network architectures, cryptography, ethical hacking, and Linux environments.',
     ],
     achievements: [
       'Maintained First Class academic honors throughout all semesters.',
-      'Averaged a cumulative GPA score of 7.8 out of 10.',
+      'Averaged a cumulative GPA score of 7.6 out of 10.',
     ],
     skillsGained: ['Network Architectures', 'Cryptography', 'Ethical Hacking', 'Linux Environments'],
     techStack: ['Gujarat University', 'B.Sc. IT', 'Network Security'],

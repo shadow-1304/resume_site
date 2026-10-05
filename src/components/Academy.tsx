@@ -73,7 +73,7 @@ export default function Academy() {
             </div>
             <div className="flex items-center justify-between">
               <span>CUMULATIVE GPA:</span>
-              <strong className="text-text-primary font-mono">7.8 / 10.00</strong>
+              <strong className="text-text-primary font-mono">7.6 / 10.00</strong>
             </div>
           </div>
 

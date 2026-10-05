@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Terminal, Copy, Check, Send, ShieldAlert, GitBranch } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ResumeModal from './ResumeModal';
 
 export default function ContactTerminal() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -10,6 +11,7 @@ export default function ContactTerminal() {
   const [terminalLogs, setTerminalLogs] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const logEndRef = useRef<HTMLDivElement | null>(null);
 
   const emailAddress = 'parthprajapati1304@gmail.com';
@@ -313,15 +315,32 @@ export default function ContactTerminal() {
               </div>
 
               {/* Resume download */}
-              <div className="flex items-center justify-between border-b border-white/5 pb-2">
-                <span className="text-text-muted">CURRICULUM:</span>
-                <a
-                  href="/resume.pdf"
-                  download="Parth_Prajapati_Resume.pdf"
-                  className="text-text-primary hover:text-accent-brightRed transition-colors"
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/5 pb-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsResumeModalOpen(true)}
+                  className="text-left text-text-muted hover:text-accent-brightRed transition-colors flex items-center gap-1.5 cursor-pointer font-mono text-xs"
                 >
-                  DOWNLOAD_RESUME.pdf
-                </a>
+                  <span>CURRICULA:</span>
+                  <span className="text-[10px] text-accent-brightRed underline decoration-dotted">[SELECT]</span>
+                </button>
+                <div className="flex items-center space-x-2.5 text-xs font-mono">
+                  <a
+                    href="/Parth_Prajapati_AI_Resume.pdf"
+                    download="Parth_Prajapati_AI_Resume.pdf"
+                    className="text-text-primary hover:text-accent-brightRed transition-colors"
+                  >
+                    AI_RESUME.pdf
+                  </a>
+                  <span className="text-white/20">|</span>
+                  <a
+                    href="/Parth_Prajapati_CyberSecurity_Resume.pdf"
+                    download="Parth_Prajapati_CyberSecurity_Resume.pdf"
+                    className="text-text-primary hover:text-accent-brightRed transition-colors"
+                  >
+                    CYBERSEC_RESUME.pdf
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -338,6 +357,11 @@ export default function ContactTerminal() {
           </div>
         </motion.div>
       </div>
+
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
     </section>
   );
 }

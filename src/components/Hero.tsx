@@ -1,9 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, ChevronRight, Terminal, ArrowDown, Activity, Github } from 'lucide-react';
+import { ShieldCheck, ChevronRight, Terminal, ArrowDown, Activity, Github, FileText } from 'lucide-react';
+import ResumeModal from './ResumeModal';
 
 export default function Hero() {
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+
   const handleScrollTo = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
@@ -127,13 +131,14 @@ export default function Hero() {
             <ChevronRight className="h-3.5 w-3.5" />
           </button>
 
-          <a
-            href="/resume.pdf"
-            download="Parth_Prajapati_Resume.pdf"
-            className="w-full sm:w-auto flex items-center justify-center space-x-2 border border-white/10 bg-surface-secondary px-5 py-3.5 text-text-secondary transition-all duration-200 hover:border-accent-brightRed hover:text-text-primary active:scale-95 text-center"
+          <button
+            type="button"
+            onClick={() => setIsResumeModalOpen(true)}
+            className="w-full sm:w-auto flex items-center justify-center space-x-2 border border-white/10 bg-surface-secondary px-5 py-3.5 text-text-secondary transition-all duration-200 hover:border-accent-brightRed hover:text-text-primary active:scale-95 text-center cursor-pointer"
           >
+            <FileText className="h-3.5 w-3.5 text-accent-brightRed" />
             <span>DOWNLOAD RESUME</span>
-          </a>
+          </button>
 
           <a
             href="https://github.com/shadow-1304"
@@ -174,6 +179,12 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Resume Selection Modal */}
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
     </section>
   );
 }
